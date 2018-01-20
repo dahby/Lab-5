@@ -41,7 +41,7 @@ function multiply(a, b) {
   var array = [mult, multString];
   console.log(array);
   return array;
-  eslint-disable-line
+  // eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -66,11 +66,19 @@ function sumAndMultiply(a, b, c) {
   console.log(aPlusB);
   var add = sum(aPlusB, c)[0];
   console.log(add);
+  var aTimesB = multiply(a, b)[0];
+  console.log(aTimesB);
+  var mult = multiply(aTimesB, c)[0];
+  console.log(mult);
+  var addString = a + ' and ' + b + ' and ' + c + ' sum to ' + add + '.';
+  var multString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mult + '.';
+  var array = [add, mult, addString, multString];
+  return array;
   //eslint-disable-line
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
