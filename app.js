@@ -41,7 +41,7 @@ function multiply(a, b) {
   var array = [mult, multString];
   console.log(array);
   return array;
-  //eslint-disable-line
+  eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -62,6 +62,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+  var aPlusB = sum(a, b)[0];
+  console.log(aPlusB);
+  var add = sum(aPlusB, c)[0];
+  console.log(add);
   //eslint-disable-line
 }
 
