@@ -10,11 +10,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
   var add = a + b;
-  console.log(add);
+  // console.log(add);
   var addString = 'The sum of ' + a + ' and ' + b + ' is ' + add + '.';
-  console.log(addString);
+  // console.log(addString);
   var array = [add, addString];
-  console.log(array);
+  // console.log(array);
   return array;
   // eslint-disable-line
 }
@@ -35,11 +35,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   var mult = a * b;
-  console.log(mult);
+  // console.log(mult);
   var multString = 'The product of ' + a + ' and ' + b + ' is ' + mult + '.';
-  console.log(multString);
+  // console.log(multString);
   var array = [mult, multString];
-  console.log(array);
+  // console.log(array);
   return array;
   // eslint-disable-line
 }
@@ -63,11 +63,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   var aPlusB = sum(a, b)[0];
-  console.log(aPlusB);
+  // console.log(aPlusB);
   var add = sum(aPlusB, c)[0];
-  console.log(add);
+  // console.log(add);
   var aTimesB = multiply(a, b)[0];
-  console.log(aTimesB);
+  // console.log(aTimesB);
   var mult = multiply(aTimesB, c)[0];
   console.log(mult);
   var addString = a + ' and ' + b + ' and ' + c + ' sum to ' + add + '.';
@@ -94,14 +94,24 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
-
+console.log(testArray);
 function sumArray(testArray) {
+  var total = 0;
+  for (var i = 0; i < testArray.length; i++) {
+    total = sum(total, testArray[i])[0];
+  }
+  var totString = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + total + ' is their sum.';
+  console.log(totString);
+  var array = [total, totString];
+  console.log(array);
+  return array;
   //eslint-disable-line
 }
 
+
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
