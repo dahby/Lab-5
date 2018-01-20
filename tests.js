@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function testSum() {
   //eslint-disable-line
